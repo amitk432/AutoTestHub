@@ -56,7 +56,10 @@ The application is designed to be deployed on Vercel.
 
 1. Push the code to GitHub.
 2. Import the project in Vercel.
-3. Set the Root Directory to `autotesthub`.
+3. **Set the Root Directory**:
+   - In the "Build & Development" settings (or during import), locate **Root Directory**.
+   - Click "Edit" and select `autotesthub`.
+   - **IMPORTANT**: The build will fail if this is not set!
 4. Configure Environment Variables in Vercel project settings.
 
 ## CI/CD

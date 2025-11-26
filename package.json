@@ -1,0 +1,12 @@
+{
+    "name": "autotesthub-root",
+    "private": true,
+    "workspaces": [
+        "autotesthub"
+    ],
+    "scripts": {
+        "dev": "npm run dev --workspace=autotesthub",
+        "build": "npm run build --workspace=autotesthub",
+        "lint": "npm run lint --workspace=autotesthub"
+    }
+}
