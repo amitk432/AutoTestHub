@@ -1,0 +1,140 @@
+/* [project]/autotesthub/app/page.module.css [app-client] (css) */
+.page-module__dU25AG__container {
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.page-module__dU25AG__header {
+  text-align: center;
+  margin-bottom: 4rem;
+  padding: 3rem 0;
+  position: relative;
+}
+
+.page-module__dU25AG__title {
+  font-family: var(--font-display);
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan), 0 0 40px var(--neon-blue);
+  letter-spacing: .1em;
+  margin-bottom: 1.5rem;
+  font-size: 4.5rem;
+  font-weight: 900;
+  animation: 3s ease-in-out infinite page-module__dU25AG__neonPulse;
+}
+
+.page-module__dU25AG__brand {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 10px var(--neon-magenta), 0 0 20px var(--neon-magenta), 0 0 30px var(--neon-magenta);
+  display: inline-block;
+  position: relative;
+}
+
+.page-module__dU25AG__subtitle {
+  font-family: var(--font-body);
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.page-module__dU25AG__grid {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  display: grid;
+}
+
+.page-module__dU25AG__card {
+  background: var(--bg-card);
+  cursor: pointer;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  border: 2px solid #00ffff4d;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  transition: all .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-module__dU25AG__card:before {
+  content: "";
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+  transform-origin: 0;
+  height: 3px;
+  transition: transform .4s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: scaleX(0);
+}
+
+.page-module__dU25AG__card:after {
+  content: "";
+  opacity: 0;
+  background: radial-gradient(circle, #00ffff1a 0%, #0000 70%);
+  width: 200%;
+  height: 200%;
+  transition: opacity .3s;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+}
+
+.page-module__dU25AG__card:hover {
+  border-color: var(--neon-cyan);
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #0ff6, 0 0 40px #0ff3, inset 0 0 20px #00ffff1a;
+}
+
+.page-module__dU25AG__card:hover:before {
+  transform: scaleX(1);
+}
+
+.page-module__dU25AG__card:hover:after {
+  opacity: 1;
+}
+
+.page-module__dU25AG__cardIcon {
+  filter: drop-shadow(0 0 10px var(--neon-cyan));
+  margin-bottom: 1.5rem;
+  font-size: 3rem;
+  transition: all .3s;
+}
+
+.page-module__dU25AG__card:hover .page-module__dU25AG__cardIcon {
+  filter: drop-shadow(0 0 20px var(--neon-magenta));
+  transform: scale(1.2);
+}
+
+.page-module__dU25AG__card h2 {
+  font-family: var(--font-display);
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan);
+  letter-spacing: .05em;
+  margin: 0 0 .75rem;
+  font-size: 1.5rem;
+}
+
+.page-module__dU25AG__card p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .page-module__dU25AG__title {
+    font-size: 2.5rem;
+  }
+
+  .page-module__dU25AG__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/*# sourceMappingURL=autotesthub_app_page_module_21c8ac84.css.map*/

@@ -1,0 +1,95 @@
+/* [project]/autotesthub/styles/Auth.module.css [app-client] (css) */
+.Auth-module__pBK_ea__container {
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+}
+
+.Auth-module__pBK_ea__form {
+  background: var(--bg-card);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+  border: 2px solid #00ffff4d;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  padding: 3rem;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 20px #0ff3, inset 0 0 20px #00ffff0d;
+}
+
+.Auth-module__pBK_ea__form:before {
+  content: "";
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Auth-module__pBK_ea__form:after {
+  content: "";
+  background: linear-gradient(90deg, var(--neon-magenta), var(--neon-cyan));
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Auth-module__pBK_ea__input {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  background: #0000004d;
+  border: 1px solid #00ffff4d;
+  padding: 1rem 1.25rem;
+  transition: all .3s;
+}
+
+.Auth-module__pBK_ea__input::placeholder {
+  color: var(--text-secondary);
+  opacity: .6;
+}
+
+.Auth-module__pBK_ea__input:focus {
+  border-color: var(--neon-cyan);
+  background: #00000080;
+  outline: none;
+  box-shadow: 0 0 10px #00ffff4d, inset 0 0 10px #00ffff1a;
+}
+
+.Auth-module__pBK_ea__title {
+  font-family: var(--font-display);
+  color: var(--neon-cyan);
+  text-align: center;
+  letter-spacing: .1em;
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  animation: 3s ease-in-out infinite Auth-module__pBK_ea__neonPulse;
+}
+
+.Auth-module__pBK_ea__error {
+  color: #ff0040;
+  text-align: center;
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+  text-shadow: 0 0 5px #ff0040;
+  background: #ff00401a;
+  border: 1px solid #ff00404d;
+  padding: .75rem;
+  font-size: .875rem;
+}
+
+/*# sourceMappingURL=autotesthub_styles_Auth_module_css_bad6b30c._.single.css.map*/

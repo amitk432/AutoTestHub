@@ -1,0 +1,95 @@
+/* [project]/autotesthub/components/Button.module.css [app-client] (css) */
+.Button-module__fWpA-G__button {
+  border: 2px solid var(--neon-cyan);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: pointer;
+  color: var(--neon-cyan);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  background: #00ffff1a;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  transition: all .3s;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.Button-module__fWpA-G__button:before {
+  content: "";
+  background: linear-gradient(90deg, #0000, #00ffff4d, #0000);
+  width: 100%;
+  height: 100%;
+  transition: left .5s;
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+
+.Button-module__fWpA-G__button:hover:before {
+  left: 100%;
+}
+
+.Button-module__fWpA-G__button:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.Button-module__fWpA-G__primary {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--neon-cyan);
+  box-shadow: 0 0 10px #00ffff4d;
+}
+
+.Button-module__fWpA-G__primary:hover:not(:disabled) {
+  background: #0ff3;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #00ffff80, 0 0 40px #00ffff4d, inset 0 0 20px #0ff3;
+}
+
+.Button-module__fWpA-G__secondary {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 5px var(--neon-magenta);
+  background: #ff00ff1a;
+}
+
+.Button-module__fWpA-G__secondary:hover:not(:disabled) {
+  background: #f0f3;
+  box-shadow: 0 0 20px #ff00ff80, inset 0 0 20px #f0f3;
+}
+
+.Button-module__fWpA-G__danger {
+  color: #ff0040;
+  text-shadow: 0 0 5px #ff0040;
+  background: #ff00401a;
+  border-color: #ff0040;
+}
+
+.Button-module__fWpA-G__danger:hover:not(:disabled) {
+  background: #ff004033;
+  box-shadow: 0 0 20px #ff004080;
+}
+
+.Button-module__fWpA-G__sm {
+  padding: .5rem 1.5rem;
+  font-size: .75rem;
+}
+
+.Button-module__fWpA-G__md {
+  padding: .75rem 2rem;
+  font-size: .875rem;
+}
+
+.Button-module__fWpA-G__lg {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=autotesthub_components_Button_module_css_bad6b30c._.single.css.map*/

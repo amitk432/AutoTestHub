@@ -1,64 +1,195 @@
 .container {
-    max-width: 800px;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
 }
 
 .playground {
     display: flex;
     gap: 2rem;
-    margin: 2rem 0;
+    margin: 3rem 0;
     align-items: center;
+    justify-content: center;
+}
+
+.sourceZone,
+.dropzone {
+    flex: 1;
+    min-height: 250px;
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    background: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1), inset 0 0 20px rgba(0, 255, 255, 0.05);
+}
+
+.zoneLabel {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-family: var(--font-display);
+    font-size: 0.75rem;
+    color: var(--neon-cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-shadow: 0 0 5px var(--neon-cyan);
 }
 
 .draggable {
-    width: 100px;
-    height: 100px;
-    background: var(--color-primary);
-    color: white;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--neon-cyan), var(--neon-blue));
+    color: var(--bg-primary);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border-radius: var(--radius-md);
+    gap: 0.5rem;
     cursor: grab;
     font-weight: bold;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    box-shadow:
+        0 0 20px rgba(0, 255, 255, 0.5),
+        0 0 40px rgba(0, 255, 255, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.draggable:hover {
+    transform: scale(1.05);
+    box-shadow:
+        0 0 30px rgba(0, 255, 255, 0.7),
+        0 0 60px rgba(0, 255, 255, 0.4),
+        inset 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 .draggable:active {
     cursor: grabbing;
+    transform: scale(0.95);
+}
+
+.dragIcon {
+    font-size: 2rem;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+
+.arrow {
+    font-size: 3rem;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
 }
 
 .dropzone {
-    width: 200px;
-    height: 200px;
-    border: 2px dashed var(--color-secondary);
-    border-radius: var(--radius-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-muted);
-    transition: all 0.2s;
+    border-style: dashed;
+    transition: all 0.3s ease;
 }
 
 .dropzone.active {
-    border-color: var(--color-accent);
-    background: rgba(56, 189, 248, 0.1);
-    color: var(--color-accent);
+    border-color: var(--neon-magenta);
+    background: rgba(255, 0, 255, 0.1);
+    box-shadow:
+        0 0 30px rgba(255, 0, 255, 0.3),
+        inset 0 0 30px rgba(255, 0, 255, 0.1);
+}
+
+.dropPlaceholder {
+    font-family: var(--font-display);
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 1.25rem;
+}
+
+.droppedItem {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, var(--neon-magenta), var(--neon-pink));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    box-shadow:
+        0 0 20px rgba(255, 0, 255, 0.5),
+        0 0 40px rgba(255, 0, 255, 0.3),
+        inset 0 0 20px rgba(255, 255, 255, 0.2);
+    animation: dropAnimation 0.5s ease;
+}
+
+@keyframes dropAnimation {
+    0% {
+        transform: scale(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2) rotate(180deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+        opacity: 1;
+    }
 }
 
 .success {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: rgba(74, 222, 128, 0.1);
-    color: #4ade80;
-    border-radius: var(--radius-sm);
-    border: 1px solid rgba(74, 222, 128, 0.2);
+    margin-top: 2rem;
+    padding: 1rem 1.5rem;
+    background: rgba(0, 255, 65, 0.1);
+    color: var(--neon-green);
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    font-family: var(--font-display);
+    text-align: center;
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+    text-shadow: 0 0 10px var(--neon-green);
 }
 
 .reset {
     margin-top: 2rem;
-    padding: 0.5rem 1rem;
-    background: var(--bg-panel);
-    border: 1px solid var(--color-secondary);
-    color: var(--text-main);
-    border-radius: var(--radius-sm);
+    padding: 0.75rem 2rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--neon-cyan);
+    color: var(--neon-cyan);
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
     cursor: pointer;
+    clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
+    transition: all 0.3s ease;
+}
+
+.reset:hover {
+    background: rgba(0, 255, 255, 0.1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    text-shadow: 0 0 10px var(--neon-cyan);
 }

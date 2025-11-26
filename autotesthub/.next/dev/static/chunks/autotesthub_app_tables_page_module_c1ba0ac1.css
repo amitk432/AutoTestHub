@@ -1,0 +1,176 @@
+/* [project]/autotesthub/app/tables/page.module.css [app-client] (css) */
+.page-module__tjqMWG__container {
+  z-index: 1;
+  max-width: 1000px;
+  position: relative;
+}
+
+.page-module__tjqMWG__tableWrapper {
+  background: var(--bg-card);
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
+  border: 2px solid #00ffff4d;
+  margin-top: 2rem;
+  overflow-x: auto;
+  box-shadow: 0 0 20px #0ff3, inset 0 0 20px #00ffff0d;
+}
+
+.page-module__tjqMWG__table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.page-module__tjqMWG__table th, .page-module__tjqMWG__table td {
+  text-align: left;
+  border-bottom: 1px solid #00ffff1a;
+  padding: 1rem;
+}
+
+.page-module__tjqMWG__table th {
+  font-family: var(--font-display);
+  color: var(--neon-cyan);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  text-shadow: 0 0 5px var(--neon-cyan);
+  background: #0000004d;
+  font-size: .875rem;
+  font-weight: 700;
+}
+
+.page-module__tjqMWG__table tbody tr {
+  transition: all .3s;
+}
+
+.page-module__tjqMWG__table tbody tr:hover {
+  background: #00ffff0d;
+  box-shadow: inset 0 0 10px #00ffff1a;
+}
+
+.page-module__tjqMWG__status {
+  font-size: .75rem;
+  font-weight: 700;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+  padding: .375rem .75rem;
+}
+
+.page-module__tjqMWG__active {
+  color: var(--neon-green);
+  text-shadow: 0 0 5px var(--neon-green);
+  background: #00ff4133;
+  border: 1px solid #00ff414d;
+}
+
+.page-module__tjqMWG__inactive {
+  color: #ff0040;
+  text-shadow: 0 0 5px #ff0040;
+  background: #ff004033;
+  border: 1px solid #ff00404d;
+}
+
+.page-module__tjqMWG__actionGroup {
+  gap: .5rem;
+  display: flex;
+}
+
+.page-module__tjqMWG__editBtn, .page-module__tjqMWG__deleteBtn, .page-module__tjqMWG__saveBtn, .page-module__tjqMWG__cancelBtn {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  cursor: pointer;
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+  background: none;
+  border: 1px solid;
+  padding: .375rem .75rem;
+  font-size: .75rem;
+  transition: all .3s;
+}
+
+.page-module__tjqMWG__editBtn {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+}
+
+.page-module__tjqMWG__editBtn:hover {
+  text-shadow: 0 0 5px var(--neon-cyan);
+  background: #00ffff1a;
+  box-shadow: 0 0 10px #00ffff4d;
+}
+
+.page-module__tjqMWG__deleteBtn {
+  color: #ff0040;
+  border-color: #ff0040;
+}
+
+.page-module__tjqMWG__deleteBtn:hover {
+  text-shadow: 0 0 5px #ff0040;
+  background: #ff00401a;
+  box-shadow: 0 0 10px #ff00404d;
+}
+
+.page-module__tjqMWG__saveBtn {
+  border-color: var(--neon-green);
+  color: var(--neon-green);
+}
+
+.page-module__tjqMWG__saveBtn:hover {
+  text-shadow: 0 0 5px var(--neon-green);
+  background: #00ff411a;
+  box-shadow: 0 0 10px #00ff414d;
+}
+
+.page-module__tjqMWG__cancelBtn {
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.page-module__tjqMWG__cancelBtn:hover {
+  background: #ffffff0d;
+}
+
+.page-module__tjqMWG__editInput {
+  border: 1px solid var(--neon-cyan);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  clip-path: polygon(4px 0, 100% 0, 100% calc(100% - 4px), calc(100% - 4px) 100%, 0 100%, 0 4px);
+  background: #00000080;
+  width: 100%;
+  padding: .375rem;
+}
+
+.page-module__tjqMWG__editInput:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffff4d;
+}
+
+.page-module__tjqMWG__loading {
+  text-align: center;
+  color: var(--neon-cyan);
+  font-family: var(--font-display);
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 3rem;
+  font-size: 1.25rem;
+  display: flex;
+}
+
+.page-module__tjqMWG__spinner {
+  border: 3px solid #0ff3;
+  border-top-color: var(--neon-cyan);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: 1s linear infinite page-module__tjqMWG__spin;
+  box-shadow: 0 0 20px #00ffff80;
+}
+
+@keyframes page-module__tjqMWG__spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=autotesthub_app_tables_page_module_c1ba0ac1.css.map*/

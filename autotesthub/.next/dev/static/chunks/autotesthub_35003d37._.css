@@ -1,0 +1,189 @@
+/* [project]/autotesthub/components/Button.module.css [app-client] (css) */
+.Button-module__fWpA-G__button {
+  border: 2px solid var(--neon-cyan);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: pointer;
+  color: var(--neon-cyan);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  background: #00ffff1a;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  transition: all .3s;
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.Button-module__fWpA-G__button:before {
+  content: "";
+  background: linear-gradient(90deg, #0000, #00ffff4d, #0000);
+  width: 100%;
+  height: 100%;
+  transition: left .5s;
+  position: absolute;
+  top: 0;
+  left: -100%;
+}
+
+.Button-module__fWpA-G__button:hover:before {
+  left: 100%;
+}
+
+.Button-module__fWpA-G__button:disabled {
+  opacity: .3;
+  cursor: not-allowed;
+  border-color: var(--text-secondary);
+  color: var(--text-secondary);
+}
+
+.Button-module__fWpA-G__primary {
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--neon-cyan);
+  box-shadow: 0 0 10px #00ffff4d;
+}
+
+.Button-module__fWpA-G__primary:hover:not(:disabled) {
+  background: #0ff3;
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px #00ffff80, 0 0 40px #00ffff4d, inset 0 0 20px #0ff3;
+}
+
+.Button-module__fWpA-G__secondary {
+  border-color: var(--neon-magenta);
+  color: var(--neon-magenta);
+  text-shadow: 0 0 5px var(--neon-magenta);
+  background: #ff00ff1a;
+}
+
+.Button-module__fWpA-G__secondary:hover:not(:disabled) {
+  background: #f0f3;
+  box-shadow: 0 0 20px #ff00ff80, inset 0 0 20px #f0f3;
+}
+
+.Button-module__fWpA-G__danger {
+  color: #ff0040;
+  text-shadow: 0 0 5px #ff0040;
+  background: #ff00401a;
+  border-color: #ff0040;
+}
+
+.Button-module__fWpA-G__danger:hover:not(:disabled) {
+  background: #ff004033;
+  box-shadow: 0 0 20px #ff004080;
+}
+
+.Button-module__fWpA-G__sm {
+  padding: .5rem 1.5rem;
+  font-size: .75rem;
+}
+
+.Button-module__fWpA-G__md {
+  padding: .75rem 2rem;
+  font-size: .875rem;
+}
+
+.Button-module__fWpA-G__lg {
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+/* [project]/autotesthub/styles/Auth.module.css [app-client] (css) */
+.Auth-module__pBK_ea__container {
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+  display: flex;
+  position: relative;
+}
+
+.Auth-module__pBK_ea__form {
+  background: var(--bg-card);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 30px, 100% 100%, 30px 100%, 0 calc(100% - 30px));
+  border: 2px solid #00ffff4d;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 480px;
+  padding: 3rem;
+  display: flex;
+  position: relative;
+  box-shadow: 0 0 20px #0ff3, inset 0 0 20px #00ffff0d;
+}
+
+.Auth-module__pBK_ea__form:before {
+  content: "";
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.Auth-module__pBK_ea__form:after {
+  content: "";
+  background: linear-gradient(90deg, var(--neon-magenta), var(--neon-cyan));
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.Auth-module__pBK_ea__input {
+  font-size: 1rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  background: #0000004d;
+  border: 1px solid #00ffff4d;
+  padding: 1rem 1.25rem;
+  transition: all .3s;
+}
+
+.Auth-module__pBK_ea__input::placeholder {
+  color: var(--text-secondary);
+  opacity: .6;
+}
+
+.Auth-module__pBK_ea__input:focus {
+  border-color: var(--neon-cyan);
+  background: #00000080;
+  outline: none;
+  box-shadow: 0 0 10px #00ffff4d, inset 0 0 10px #00ffff1a;
+}
+
+.Auth-module__pBK_ea__title {
+  font-family: var(--font-display);
+  color: var(--neon-cyan);
+  text-align: center;
+  letter-spacing: .1em;
+  text-shadow: 0 0 10px var(--neon-cyan), 0 0 20px var(--neon-cyan), 0 0 30px var(--neon-cyan);
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  animation: 3s ease-in-out infinite Auth-module__pBK_ea__neonPulse;
+}
+
+.Auth-module__pBK_ea__error {
+  color: #ff0040;
+  text-align: center;
+  clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
+  text-shadow: 0 0 5px #ff0040;
+  background: #ff00401a;
+  border: 1px solid #ff00404d;
+  padding: .75rem;
+  font-size: .875rem;
+}
+
+/*# sourceMappingURL=autotesthub_35003d37._.css.map*/
