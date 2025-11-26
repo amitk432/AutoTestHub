@@ -4,6 +4,7 @@ import { supabase } from '@/services/supabase/client';
 import { Button } from '@/components/Button';
 import styles from '@/styles/Auth.module.css';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function LoginPage() {
     const [email, setEmail] = useState('');
@@ -17,12 +18,16 @@ export default function LoginPage() {
         setLoading(true);
         setError(null);
 
-        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        try {
+            const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-        if (error) {
-            setError(error.message);
-        } else {
-            router.push('/');
+            if (error) {
+                setError(error.message);
+            } else {
+                router.push('/');
+            }
+        } catch (err) {
+            setError('Failed to connect. Please check if Supabase credentials are configured.');
         }
         setLoading(false);
     };
@@ -51,6 +56,9 @@ export default function LoginPage() {
                 <Button type="submit" disabled={loading}>
                     {loading ? 'Logging in...' : 'Login'}
                 </Button>
+                <div className={styles.link}>
+                    Don't have an account? <Link href="/signup" className={styles.linkText}>Sign Up</Link>
+                </div>
             </form>
         </div>
     );

@@ -4,6 +4,7 @@ import { supabase } from '@/services/supabase/client';
 import { Button } from '@/components/Button';
 import styles from '@/styles/Auth.module.css';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function SignupPage() {
     const [email, setEmail] = useState('');
@@ -17,13 +18,17 @@ export default function SignupPage() {
         setLoading(true);
         setError(null);
 
-        const { error } = await supabase.auth.signUp({ email, password });
+        try {
+            const { error } = await supabase.auth.signUp({ email, password });
 
-        if (error) {
-            setError(error.message);
-        } else {
-            alert('Signup successful! Please check your email for confirmation.');
-            router.push('/login');
+            if (error) {
+                setError(error.message);
+            } else {
+                alert('Signup successful! Please check your email for confirmation.');
+                router.push('/login');
+            }
+        } catch (err) {
+            setError('Failed to connect. Please check if Supabase credentials are configured.');
         }
         setLoading(false);
     };
@@ -48,10 +53,14 @@ export default function SignupPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     className={styles.input}
                     required
+                    minLength={6}
                 />
                 <Button type="submit" disabled={loading}>
                     {loading ? 'Signing up...' : 'Sign Up'}
                 </Button>
+                <div className={styles.link}>
+                    Already have an account? <Link href="/login" className={styles.linkText}>Login</Link>
+                </div>
             </form>
         </div>
     );

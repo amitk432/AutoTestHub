@@ -109,6 +109,8 @@ __turbopack_context__.v({
   "error": "Auth-module__pBK_ea__error",
   "form": "Auth-module__pBK_ea__form",
   "input": "Auth-module__pBK_ea__input",
+  "link": "Auth-module__pBK_ea__link",
+  "linkText": "Auth-module__pBK_ea__linkText",
   "neonPulse": "Auth-module__pBK_ea__neonPulse",
   "title": "Auth-module__pBK_ea__title",
 });
@@ -127,6 +129,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$services$2f$s
 var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$components$2f$Button$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/autotesthub/components/Button.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$styles$2f$Auth$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/autotesthub/styles/Auth.module.css [app-client] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/autotesthub/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/autotesthub/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 'use client';
@@ -136,14 +139,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 function LoginPage() {
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(23);
-    if ($[0] !== "4e9e9294d44801f4cb0a3b84ca4a449618be11732745b9ea34e06332c13e61eb") {
-        for(let $i = 0; $i < 23; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(24);
+    if ($[0] !== "3ddd4765a3fec4b1c43faa112646a2f7d7d059946b10baf5c1933b205192cf85") {
+        for(let $i = 0; $i < 24; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "4e9e9294d44801f4cb0a3b84ca4a449618be11732745b9ea34e06332c13e61eb";
+        $[0] = "3ddd4765a3fec4b1c43faa112646a2f7d7d059946b10baf5c1933b205192cf85";
     }
     const [email, setEmail] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [password, setPassword] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
@@ -157,14 +161,19 @@ function LoginPage() {
                 e.preventDefault();
                 setLoading(true);
                 setError(null);
-                const { error: error_0 } = await __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$services$2f$supabase$2f$client$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["supabase"].auth.signInWithPassword({
-                    email,
-                    password
-                });
-                if (error_0) {
-                    setError(error_0.message);
-                } else {
-                    router.push("/");
+                ;
+                try {
+                    const { error: error_0 } = await __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$services$2f$supabase$2f$client$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["supabase"].auth.signInWithPassword({
+                        email,
+                        password
+                    });
+                    if (error_0) {
+                        setError(error_0.message);
+                    } else {
+                        router.push("/");
+                    }
+                } catch (t1) {
+                    setError("Failed to connect. Please check if Supabase credentials are configured.");
                 }
                 setLoading(false);
             }
@@ -184,7 +193,7 @@ function LoginPage() {
             children: "Login"
         }, void 0, false, {
             fileName: "[project]/autotesthub/app/login/page.tsx",
-            lineNumber: 53,
+            lineNumber: 59,
             columnNumber: 10
         }, this);
         $[5] = t1;
@@ -198,7 +207,7 @@ function LoginPage() {
             children: error
         }, void 0, false, {
             fileName: "[project]/autotesthub/app/login/page.tsx",
-            lineNumber: 60,
+            lineNumber: 66,
             columnNumber: 19
         }, this);
         $[6] = error;
@@ -226,7 +235,7 @@ function LoginPage() {
             required: true
         }, void 0, false, {
             fileName: "[project]/autotesthub/app/login/page.tsx",
-            lineNumber: 77,
+            lineNumber: 83,
             columnNumber: 10
         }, this);
         $[9] = email;
@@ -254,7 +263,7 @@ function LoginPage() {
             required: true
         }, void 0, false, {
             fileName: "[project]/autotesthub/app/login/page.tsx",
-            lineNumber: 94,
+            lineNumber: 100,
             columnNumber: 10
         }, this);
         $[12] = password;
@@ -271,7 +280,7 @@ function LoginPage() {
             children: t7
         }, void 0, false, {
             fileName: "[project]/autotesthub/app/login/page.tsx",
-            lineNumber: 103,
+            lineNumber: 109,
             columnNumber: 10
         }, this);
         $[14] = loading;
@@ -281,8 +290,33 @@ function LoginPage() {
         t8 = $[16];
     }
     let t9;
-    if ($[17] !== handleLogin || $[18] !== t2 || $[19] !== t4 || $[20] !== t6 || $[21] !== t8) {
+    if ($[17] === Symbol.for("react.memo_cache_sentinel")) {
         t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$styles$2f$Auth$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].link,
+            children: [
+                "Don't have an account? ",
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                    href: "/signup",
+                    className: __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$styles$2f$Auth$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].linkText,
+                    children: "Sign Up"
+                }, void 0, false, {
+                    fileName: "[project]/autotesthub/app/login/page.tsx",
+                    lineNumber: 118,
+                    columnNumber: 62
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/autotesthub/app/login/page.tsx",
+            lineNumber: 118,
+            columnNumber: 10
+        }, this);
+        $[17] = t9;
+    } else {
+        t9 = $[17];
+    }
+    let t10;
+    if ($[18] !== handleLogin || $[19] !== t2 || $[20] !== t4 || $[21] !== t6 || $[22] !== t8) {
+        t10 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$styles$2f$Auth$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].container,
             children: [
                 t1,
@@ -293,29 +327,30 @@ function LoginPage() {
                         t2,
                         t4,
                         t6,
-                        t8
+                        t8,
+                        t9
                     ]
                 }, void 0, true, {
                     fileName: "[project]/autotesthub/app/login/page.tsx",
-                    lineNumber: 112,
-                    columnNumber: 48
+                    lineNumber: 125,
+                    columnNumber: 49
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/autotesthub/app/login/page.tsx",
-            lineNumber: 112,
-            columnNumber: 10
+            lineNumber: 125,
+            columnNumber: 11
         }, this);
-        $[17] = handleLogin;
-        $[18] = t2;
-        $[19] = t4;
-        $[20] = t6;
-        $[21] = t8;
-        $[22] = t9;
+        $[18] = handleLogin;
+        $[19] = t2;
+        $[20] = t4;
+        $[21] = t6;
+        $[22] = t8;
+        $[23] = t10;
     } else {
-        t9 = $[22];
+        t10 = $[23];
     }
-    return t9;
+    return t10;
 }
 _s(LoginPage, "+f/D1AVPDDlDWR0xbXZPGIOw1iA=", false, function() {
     return [

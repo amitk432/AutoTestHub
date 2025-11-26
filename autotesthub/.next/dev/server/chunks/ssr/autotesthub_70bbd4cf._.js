@@ -57,6 +57,8 @@ __turbopack_context__.v({
   "error": "Auth-module__pBK_ea__error",
   "form": "Auth-module__pBK_ea__form",
   "input": "Auth-module__pBK_ea__input",
+  "link": "Auth-module__pBK_ea__link",
+  "linkText": "Auth-module__pBK_ea__linkText",
   "neonPulse": "Auth-module__pBK_ea__neonPulse",
   "title": "Auth-module__pBK_ea__title",
 });
@@ -74,7 +76,9 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$services$2f$s
 var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$components$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/autotesthub/components/Button.tsx [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$styles$2f$Auth$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__ = __turbopack_context__.i("[project]/autotesthub/styles/Auth.module.css [app-ssr] (css module)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/autotesthub/node_modules/next/navigation.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/autotesthub/node_modules/next/dist/client/app-dir/link.js [app-ssr] (ecmascript)");
 'use client';
+;
 ;
 ;
 ;
@@ -91,14 +95,18 @@ function LoginPage() {
         e.preventDefault();
         setLoading(true);
         setError(null);
-        const { error } = await __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$services$2f$supabase$2f$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].auth.signInWithPassword({
-            email,
-            password
-        });
-        if (error) {
-            setError(error.message);
-        } else {
-            router.push('/');
+        try {
+            const { error } = await __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$services$2f$supabase$2f$client$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["supabase"].auth.signInWithPassword({
+                email,
+                password
+            });
+            if (error) {
+                setError(error.message);
+            } else {
+                router.push('/');
+            }
+        } catch (err) {
+            setError('Failed to connect. Please check if Supabase credentials are configured.');
         }
         setLoading(false);
     };
@@ -110,7 +118,7 @@ function LoginPage() {
                 children: "Login"
             }, void 0, false, {
                 fileName: "[project]/autotesthub/app/login/page.tsx",
-                lineNumber: 32,
+                lineNumber: 37,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -122,7 +130,7 @@ function LoginPage() {
                         children: error
                     }, void 0, false, {
                         fileName: "[project]/autotesthub/app/login/page.tsx",
-                        lineNumber: 34,
+                        lineNumber: 39,
                         columnNumber: 27
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -134,7 +142,7 @@ function LoginPage() {
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/autotesthub/app/login/page.tsx",
-                        lineNumber: 35,
+                        lineNumber: 40,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -146,7 +154,7 @@ function LoginPage() {
                         required: true
                     }, void 0, false, {
                         fileName: "[project]/autotesthub/app/login/page.tsx",
-                        lineNumber: 43,
+                        lineNumber: 48,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$components$2f$Button$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Button"], {
@@ -155,19 +163,38 @@ function LoginPage() {
                         children: loading ? 'Logging in...' : 'Login'
                     }, void 0, false, {
                         fileName: "[project]/autotesthub/app/login/page.tsx",
-                        lineNumber: 51,
+                        lineNumber: 56,
+                        columnNumber: 17
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$styles$2f$Auth$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].link,
+                        children: [
+                            "Don't have an account? ",
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                href: "/signup",
+                                className: __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$styles$2f$Auth$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].linkText,
+                                children: "Sign Up"
+                            }, void 0, false, {
+                                fileName: "[project]/autotesthub/app/login/page.tsx",
+                                lineNumber: 60,
+                                columnNumber: 44
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/autotesthub/app/login/page.tsx",
+                        lineNumber: 59,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/autotesthub/app/login/page.tsx",
-                lineNumber: 33,
+                lineNumber: 38,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/autotesthub/app/login/page.tsx",
-        lineNumber: 31,
+        lineNumber: 36,
         columnNumber: 9
     }, this);
 }

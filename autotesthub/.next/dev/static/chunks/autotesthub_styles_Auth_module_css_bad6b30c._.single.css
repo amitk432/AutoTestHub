@@ -92,4 +92,24 @@
   font-size: .875rem;
 }
 
+.Auth-module__pBK_ea__link {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: 1rem;
+  font-size: .875rem;
+}
+
+.Auth-module__pBK_ea__linkText {
+  color: var(--neon-cyan);
+  text-shadow: 0 0 5px var(--neon-cyan);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.Auth-module__pBK_ea__linkText:hover {
+  color: var(--neon-magenta);
+  text-shadow: 0 0 10px var(--neon-magenta);
+}
+
 /*# sourceMappingURL=autotesthub_styles_Auth_module_css_bad6b30c._.single.css.map*/

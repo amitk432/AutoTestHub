@@ -96,3 +96,23 @@
     clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px);
     text-shadow: 0 0 5px #ff0040;
 }
+
+.link {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    margin-top: 1rem;
+}
+
+.linkText {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 0 0 5px var(--neon-cyan);
+    transition: all 0.3s ease;
+}
+
+.linkText:hover {
+    color: var(--neon-magenta);
+    text-shadow: 0 0 10px var(--neon-magenta);
+}

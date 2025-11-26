@@ -5,7 +5,8 @@ import styles from './Sidebar.module.css';
 
 const navItems = [
     { label: 'Dashboard', href: '/' },
-    { label: 'Authentication', href: '/login' }, // Linking to login as entry point
+    { label: 'Login', href: '/login' },
+    { label: 'Sign Up', href: '/signup' },
     { label: 'Drag & Drop', href: '/drag-drop' },
     { label: 'Dynamic Tables', href: '/tables' },
     { label: 'Complex Forms', href: '/forms' },

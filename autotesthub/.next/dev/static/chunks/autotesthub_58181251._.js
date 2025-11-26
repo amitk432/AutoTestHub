@@ -37,10 +37,13 @@ const navItems = [
         href: '/'
     },
     {
-        label: 'Authentication',
+        label: 'Login',
         href: '/login'
     },
-    // Linking to login as entry point
+    {
+        label: 'Sign Up',
+        href: '/signup'
+    },
     {
         label: 'Drag & Drop',
         href: '/drag-drop'
@@ -61,11 +64,11 @@ const navItems = [
 const Sidebar = ()=>{
     _s();
     const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(9);
-    if ($[0] !== "bdf2c0565ffaa962499949072c2cd79226a767bc96410b42db301780156f70b2") {
+    if ($[0] !== "e9468452f86ea937ba79d062ff2c63c5d7b823bbbc58c56f4dd82eab49de81e1") {
         for(let $i = 0; $i < 9; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "bdf2c0565ffaa962499949072c2cd79226a767bc96410b42db301780156f70b2";
+        $[0] = "e9468452f86ea937ba79d062ff2c63c5d7b823bbbc58c56f4dd82eab49de81e1";
     }
     const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$autotesthub$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
     let t0;
@@ -75,7 +78,7 @@ const Sidebar = ()=>{
             children: "AutoTestHub"
         }, void 0, false, {
             fileName: "[project]/autotesthub/components/Sidebar.tsx",
-            lineNumber: 39,
+            lineNumber: 40,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[1] = t0;
@@ -90,7 +93,7 @@ const Sidebar = ()=>{
                 children: item.label
             }, item.href, false, {
                 fileName: "[project]/autotesthub/components/Sidebar.tsx",
-                lineNumber: 46,
+                lineNumber: 47,
                 columnNumber: 31
             }, ("TURBOPACK compile-time value", void 0)));
         $[2] = pathname;
@@ -105,7 +108,7 @@ const Sidebar = ()=>{
             children: t1
         }, void 0, false, {
             fileName: "[project]/autotesthub/components/Sidebar.tsx",
-            lineNumber: 54,
+            lineNumber: 55,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[4] = t1;
@@ -120,7 +123,7 @@ const Sidebar = ()=>{
             children: "v1.0.0"
         }, void 0, false, {
             fileName: "[project]/autotesthub/components/Sidebar.tsx",
-            lineNumber: 62,
+            lineNumber: 63,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[6] = t3;
@@ -138,7 +141,7 @@ const Sidebar = ()=>{
             ]
         }, void 0, true, {
             fileName: "[project]/autotesthub/components/Sidebar.tsx",
-            lineNumber: 69,
+            lineNumber: 70,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
         $[7] = t2;
