@@ -36,20 +36,6 @@ AutoTestHub is a unified automation testing sandbox designed to serve as a compr
    ```
    Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Testing
-
-To run the automation tests:
-
-1. Ensure the development server is running (`npm run dev`).
-2. Run Cypress:
-   ```bash
-   npx cypress run
-   ```
-   Or to open the interactive runner:
-   ```bash
-   npx cypress open
-   ```
-
 ## Deployment
 
 The application is designed to be deployed on Vercel.

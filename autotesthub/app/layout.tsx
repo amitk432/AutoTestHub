@@ -15,9 +15,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div className="scanline"></div>
         <div style={{ display: 'flex' }}>
           <Sidebar />
-          <main style={{ flex: 1, marginLeft: '260px', padding: '2rem' }}>
+          <main style={{ flex: 1, marginLeft: '280px', padding: '2rem', position: 'relative', zIndex: 1 }}>
             {children}
           </main>
         </div>

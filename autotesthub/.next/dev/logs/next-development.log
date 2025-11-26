@@ -316,3 +316,6 @@ https://nextjs.org/docs/messages/module-not-found
 [00:25:08.086] Server  LOG      ✓ Compiled in 34ms
 [00:25:17.092] Server  LOG      ✓ Compiled in 57ms
 [00:25:19.187] Server  LOG      ✓ Compiled in 32ms
+[00:28:03.831] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:04.801] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:28:37.887] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold

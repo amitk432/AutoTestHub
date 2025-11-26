@@ -1,69 +1,68 @@
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  animation: fadeIn 0.6s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .header {
   text-align: center;
   margin-bottom: 4rem;
-  padding: 2rem 0;
+  padding: 3rem 0;
+  position: relative;
 }
 
 .title {
-  font-size: 4rem;
+  font-family: var(--font-display);
+  font-size: 4.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #fff 0%, var(--color-primary) 50%, var(--color-accent) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: fadeIn 0.8s ease;
-  letter-spacing: -0.03em;
+  color: var(--neon-cyan);
+  text-shadow:
+    0 0 10px var(--neon-cyan),
+    0 0 20px var(--neon-cyan),
+    0 0 30px var(--neon-cyan),
+    0 0 40px var(--neon-blue);
+  letter-spacing: 0.1em;
+  animation: neonPulse 3s ease-in-out infinite;
 }
 
 .brand {
   display: inline-block;
   position: relative;
-}
-
-.brand::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-  border-radius: 2px;
-  animation: glow 2s ease-in-out infinite;
+  color: var(--neon-magenta);
+  text-shadow:
+    0 0 10px var(--neon-magenta),
+    0 0 20px var(--neon-magenta),
+    0 0 30px var(--neon-magenta);
 }
 
 .subtitle {
-  font-size: 1.375rem;
-  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: var(--text-secondary);
   font-weight: 400;
-  animation: fadeIn 1s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
-  animation: fadeIn 1.2s ease;
 }
 
 .card {
   background: var(--bg-card);
-  border: var(--glass-border);
-  border-radius: var(--radius-xl);
-  padding: 2.5rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+  padding: 2rem;
+  transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  backdrop-filter: blur(20px);
   position: relative;
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 20px 100%, 0 calc(100% - 20px));
   overflow: hidden;
 }
 
@@ -73,47 +72,66 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  height: 3px;
+  background: linear-gradient(90deg, var(--neon-cyan), var(--neon-magenta));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
 }
 
+.card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
 .card:hover {
-  transform: translateY(-8px) scale(1.02);
-  background: rgba(30, 41, 59, 0.7);
-  border-color: var(--color-primary);
+  transform: translateY(-8px);
+  border-color: var(--neon-cyan);
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 0 60px rgba(167, 139, 250, 0.2);
+    0 0 20px rgba(0, 255, 255, 0.4),
+    0 0 40px rgba(0, 255, 255, 0.2),
+    inset 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 .card:hover::before {
   transform: scaleX(1);
 }
 
+.card:hover::after {
+  opacity: 1;
+}
+
 .cardIcon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
-  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px var(--neon-cyan));
+  transition: all 0.3s ease;
 }
 
 .card:hover .cardIcon {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.2);
+  filter: drop-shadow(0 0 20px var(--neon-magenta));
 }
 
 .card h2 {
-  font-size: 1.625rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
   margin: 0 0 0.75rem 0;
-  color: var(--text-main);
-  font-weight: 700;
+  color: var(--neon-cyan);
+  text-shadow: 0 0 10px var(--neon-cyan);
+  letter-spacing: 0.05em;
 }
 
 .card p {
-  color: var(--text-muted);
-  line-height: 1.7;
+  color: var(--text-secondary);
+  line-height: 1.6;
   margin: 0;
   font-size: 1rem;
 }
