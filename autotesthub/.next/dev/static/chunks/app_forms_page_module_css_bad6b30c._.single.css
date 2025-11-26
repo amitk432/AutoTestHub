@@ -1,0 +1,43 @@
+/* [project]/app/forms/page.module.css [app-client] (css) */
+.page-module__Ell88G__container {
+  max-width: 600px;
+}
+
+.page-module__Ell88G__form {
+  background: var(--bg-panel);
+  border-radius: var(--radius-lg);
+  border: var(--glass-border);
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.page-module__Ell88G__group {
+  flex-direction: column;
+  gap: .5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
+.page-module__Ell88G__group label {
+  color: var(--text-muted);
+  font-size: .875rem;
+}
+
+.page-module__Ell88G__input {
+  border: 1px solid var(--color-secondary);
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  background: #0003;
+  padding: .75rem;
+}
+
+.page-module__Ell88G__range {
+  width: 100%;
+  accent-color: var(--color-primary);
+}
+
+.page-module__Ell88G__file {
+  color: var(--text-muted);
+}
+
+/*# sourceMappingURL=app_forms_page_module_css_bad6b30c._.single.css.map*/

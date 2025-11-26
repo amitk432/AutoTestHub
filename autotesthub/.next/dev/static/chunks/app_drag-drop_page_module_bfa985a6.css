@@ -1,0 +1,67 @@
+/* [project]/app/drag-drop/page.module.css [app-client] (css) */
+.page-module__R1liwG__container {
+  max-width: 800px;
+}
+
+.page-module__R1liwG__playground {
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  display: flex;
+}
+
+.page-module__R1liwG__draggable {
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  cursor: grab;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  font-weight: bold;
+  display: flex;
+}
+
+.page-module__R1liwG__draggable:active {
+  cursor: grabbing;
+}
+
+.page-module__R1liwG__dropzone {
+  border: 2px dashed var(--color-secondary);
+  border-radius: var(--radius-lg);
+  width: 200px;
+  height: 200px;
+  color: var(--text-muted);
+  justify-content: center;
+  align-items: center;
+  transition: all .2s;
+  display: flex;
+}
+
+.page-module__R1liwG__dropzone.page-module__R1liwG__active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: #38bdf81a;
+}
+
+.page-module__R1liwG__success {
+  color: #4ade80;
+  border-radius: var(--radius-sm);
+  background: #4ade801a;
+  border: 1px solid #4ade8033;
+  margin-top: 1rem;
+  padding: 1rem;
+}
+
+.page-module__R1liwG__reset {
+  background: var(--bg-panel);
+  border: 1px solid var(--color-secondary);
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: .5rem 1rem;
+}
+
+/*# sourceMappingURL=app_drag-drop_page_module_bfa985a6.css.map*/

@@ -1,0 +1,40 @@
+.container {
+    max-width: 600px;
+}
+
+.form {
+    margin-top: 2rem;
+    background: var(--bg-panel);
+    padding: 2rem;
+    border-radius: var(--radius-lg);
+    border: var(--glass-border);
+}
+
+.group {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.group label {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+}
+
+.input {
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--color-secondary);
+    color: var(--text-main);
+    padding: 0.75rem;
+    border-radius: var(--radius-sm);
+}
+
+.range {
+    width: 100%;
+    accent-color: var(--color-primary);
+}
+
+.file {
+    color: var(--text-muted);
+}

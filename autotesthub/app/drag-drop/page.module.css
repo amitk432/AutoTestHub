@@ -1,0 +1,64 @@
+.container {
+    max-width: 800px;
+}
+
+.playground {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem 0;
+    align-items: center;
+}
+
+.draggable {
+    width: 100px;
+    height: 100px;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-md);
+    cursor: grab;
+    font-weight: bold;
+}
+
+.draggable:active {
+    cursor: grabbing;
+}
+
+.dropzone {
+    width: 200px;
+    height: 200px;
+    border: 2px dashed var(--color-secondary);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    transition: all 0.2s;
+}
+
+.dropzone.active {
+    border-color: var(--color-accent);
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--color-accent);
+}
+
+.success {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(74, 222, 128, 0.2);
+}
+
+.reset {
+    margin-top: 2rem;
+    padding: 0.5rem 1rem;
+    background: var(--bg-panel);
+    border: 1px solid var(--color-secondary);
+    color: var(--text-main);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}

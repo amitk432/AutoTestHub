@@ -1,34 +1,50 @@
 /* [project]/app/globals.css [app-client] (css) */
 :root {
-  --color-primary: #6c63ff;
-  --color-primary-hover: #5a52d5;
-  --color-secondary: #eaeaea;
-  --color-secondary-hover: #dcdcdc;
-  --color-danger: #ff4d4f;
-  --background: #fff;
-  --foreground: #171717;
-  --border-radius: 8px;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --bg-app: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+  --bg-panel: #1e293b99;
+  --bg-card: #1e293b66;
+  --color-primary: #a78bfa;
+  --color-primary-hover: #8b5cf6;
+  --color-secondary: #94a3b8;
+  --color-accent: #60a5fa;
+  --color-success: #4ade80;
+  --color-danger: #f87171;
+  --text-main: #f8fafc;
+  --text-muted: #cbd5e1;
+  --border-color: #94a3b81a;
+  --glass-border: 1px solid #ffffff14;
+  --glass-bg: #ffffff08;
+  --radius-sm: .5rem;
+  --radius-md: .75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --shadow-sm: 0 2px 8px #0000001a;
+  --shadow-md: 0 4px 16px #0003;
+  --shadow-lg: 0 8px 32px #0000004d;
+  --shadow-glow: 0 0 40px #a78bfa26;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --color-secondary: #333;
-    --color-secondary-hover: #444;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
   max-width: 100vw;
   font-family: var(--font-sans);
-  background-color: var(--background);
-  color: var(--foreground);
+  color: var(--text-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin: 0;
-  padding: 0;
+  background-color: #0a0e27;
+  background-image: radial-gradient(at 0 0, #a78bfa1a 0, #0000 50%), radial-gradient(at 100% 100%, #60a5fa1a 0, #0000 50%);
+  background-position: 0 0;
+  background-repeat: repeat;
+  background-size: auto;
+  background-attachment: scroll;
+  background-origin: padding-box;
+  background-clip: border-box;
   overflow-x: hidden;
 }
 
@@ -37,8 +53,75 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a80;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--color-primary-hover), var(--color-accent));
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px #a78bfa4d;
+  }
+
+  50% {
+    box-shadow: 0 0 40px #a78bfa80;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -.025em;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+p {
+  color: var(--text-muted);
+  line-height: 1.6;
 }
 
 /*# sourceMappingURL=app_globals_css_bad6b30c._.single.css.map*/

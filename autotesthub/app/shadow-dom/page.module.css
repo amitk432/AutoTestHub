@@ -1,0 +1,10 @@
+.container {
+    max-width: 800px;
+}
+
+.section {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 1px dashed var(--color-secondary);
+    border-radius: var(--radius-lg);
+}

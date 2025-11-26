@@ -1,0 +1,13 @@
+/* [project]/app/shadow-dom/page.module.css [app-client] (css) */
+.page-module__Hi51Ua__container {
+  max-width: 800px;
+}
+
+.page-module__Hi51Ua__section {
+  border: 1px dashed var(--color-secondary);
+  border-radius: var(--radius-lg);
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+/*# sourceMappingURL=app_shadow-dom_page_module_1181ba0b.css.map*/

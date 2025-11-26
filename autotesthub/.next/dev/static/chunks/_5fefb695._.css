@@ -1,32 +1,29 @@
 /* [project]/app/globals.css [app-client] (css) */
 :root {
-  --color-primary: #6c63ff;
-  --color-primary-hover: #5a52d5;
-  --color-secondary: #eaeaea;
-  --color-secondary-hover: #dcdcdc;
-  --color-danger: #ff4d4f;
-  --background: #fff;
-  --foreground: #171717;
-  --border-radius: 8px;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --color-secondary: #333;
-    --color-secondary-hover: #444;
-  }
+  --bg-app: #0f172a;
+  --bg-panel: #1e293b;
+  --bg-card: #1e293bb3;
+  --color-primary: #818cf8;
+  --color-primary-hover: #6366f1;
+  --color-secondary: #94a3b8;
+  --color-accent: #38bdf8;
+  --color-danger: #f87171;
+  --text-main: #f1f5f9;
+  --text-muted: #cbd5e1;
+  --border-color: #94a3b81a;
+  --glass-border: 1px solid #ffffff1a;
+  --radius-sm: .5rem;
+  --radius-md: .75rem;
+  --radius-lg: 1rem;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 html, body {
   max-width: 100vw;
   font-family: var(--font-sans);
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: var(--bg-app);
+  color: var(--text-main);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -39,6 +36,23 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-panel);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary);
 }
 
 /* [project]/components/Navbar.module.css [app-client] (css) */

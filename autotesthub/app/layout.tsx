@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
+import { Sidebar } from "@/components/Sidebar";
 
 export const metadata: Metadata = {
   title: "AutoTestHub",
@@ -15,8 +15,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <main>{children}</main>
+        <div style={{ display: 'flex' }}>
+          <Sidebar />
+          <main style={{ flex: 1, marginLeft: '260px', padding: '2rem' }}>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   );

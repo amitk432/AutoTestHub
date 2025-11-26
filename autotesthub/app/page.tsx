@@ -1,64 +1,51 @@
 'use client';
-import { useState } from 'react';
 import { Button } from '@/components/Button';
-import { Modal } from '@/components/Modal';
 import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function Home() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
     <div className={styles.container}>
-      <main className={styles.main}>
+      <header className={styles.header}>
         <h1 className={styles.title}>
           Welcome to <span className={styles.brand}>AutoTestHub</span>
         </h1>
-        <p className={styles.description}>
-          A unified automation testing sandbox for verifying your scripts.
+        <p className={styles.subtitle}>
+          The ultimate playground for testing automation scripts.
         </p>
+      </header>
 
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h2>Authentication &rarr;</h2>
-            <p>Test login and signup flows with real Supabase backend.</p>
-            <div className={styles.actions}>
-              <Link href="/login"><Button>Login</Button></Link>
-              <Link href="/signup"><Button variant="secondary">Signup</Button></Link>
-            </div>
-          </div>
+      <div className={styles.grid}>
+        <Link href="/drag-drop" className={styles.card}>
+          <div className={styles.cardIcon}>✋</div>
+          <h2>Drag & Drop</h2>
+          <p>Test mouse interactions, drag events, and drop zones.</p>
+        </Link>
 
-          <div className={styles.card}>
-            <h2>UI Interactions &rarr;</h2>
-            <p>Test hover effects, button states, and responsive design.</p>
-            <div className={styles.actions}>
-              <Button onClick={() => alert('Clicked!')}>Click Me</Button>
-              <Button disabled>Disabled</Button>
-            </div>
-          </div>
+        <Link href="/tables" className={styles.card}>
+          <div className={styles.cardIcon}>📊</div>
+          <h2>Dynamic Tables</h2>
+          <p>Verify sorting, pagination, and data extraction.</p>
+        </Link>
 
-          <div className={styles.card}>
-            <h2>Alerts & Modals &rarr;</h2>
-            <p>Trigger alerts and modals for testing popups.</p>
-            <div className={styles.actions}>
-              <Button variant="secondary" onClick={() => alert('This is an alert!')}>
-                Trigger Alert
-              </Button>
-              <Button onClick={() => setIsModalOpen(true)}>
-                Open Modal
-              </Button>
-            </div>
-          </div>
-        </div>
-      </main>
+        <Link href="/forms" className={styles.card}>
+          <div className={styles.cardIcon}>📝</div>
+          <h2>Complex Forms</h2>
+          <p>Interact with multi-selects, sliders, and file uploads.</p>
+        </Link>
 
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => setIsModalOpen(false)}
-        title="Test Modal"
-      >
-        <p>This is a modal dialog for testing purposes. You can verify that it overlays the content and blocks interaction with the background.</p>
-      </Modal>
+        <Link href="/shadow-dom" className={styles.card}>
+          <div className={styles.cardIcon}>👻</div>
+          <h2>Shadow DOM</h2>
+          <p>Practice selecting elements inside Shadow Roots and iFrames.</p>
+        </Link>
+
+        <Link href="/login" className={styles.card}>
+          <div className={styles.cardIcon}>🔐</div>
+          <h2>Authentication</h2>
+          <p>Test login flows and session management.</p>
+        </Link>
+      </div>
     </div>
   );
 }
