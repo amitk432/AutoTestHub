@@ -1,0 +1,63 @@
+/* [project]/components/Button.module.css [app-client] (css) */
+.Button-module__3dJGfa__button {
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  transition: all .2s;
+  display: inline-flex;
+}
+
+.Button-module__3dJGfa__button:disabled {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.Button-module__3dJGfa__primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.Button-module__3dJGfa__primary:hover:not(:disabled) {
+  background: var(--color-primary-hover);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px #6c63ff4d;
+}
+
+.Button-module__3dJGfa__secondary {
+  background: var(--color-secondary);
+  color: var(--foreground);
+}
+
+.Button-module__3dJGfa__secondary:hover:not(:disabled) {
+  background: var(--color-secondary-hover);
+}
+
+.Button-module__3dJGfa__danger {
+  background: var(--color-danger);
+  color: #fff;
+}
+
+.Button-module__3dJGfa__danger:hover:not(:disabled) {
+  opacity: .9;
+}
+
+.Button-module__3dJGfa__sm {
+  padding: .5rem 1rem;
+  font-size: .875rem;
+}
+
+.Button-module__3dJGfa__md {
+  padding: .75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.Button-module__3dJGfa__lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+}
+
+/*# sourceMappingURL=components_Button_module_css_bad6b30c._.single.css.map*/

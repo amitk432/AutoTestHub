@@ -1,0 +1,88 @@
+/* [project]/components/Modal.module.css [app-client] (css) */
+.Modal-module__iX2sxG__overlay {
+  z-index: 1000;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: #00000080;
+  justify-content: center;
+  align-items: center;
+  animation: .2s Modal-module__iX2sxG__fadeIn;
+  display: flex;
+  position: fixed;
+  inset: 0;
+}
+
+.Modal-module__iX2sxG__modal {
+  background: var(--background);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-secondary);
+  width: 90%;
+  max-width: 500px;
+  color: var(--foreground);
+  animation: .3s Modal-module__iX2sxG__slideUp;
+  box-shadow: 0 10px 25px #0003;
+}
+
+.Modal-module__iX2sxG__header {
+  border-bottom: 1px solid var(--color-secondary);
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  display: flex;
+}
+
+.Modal-module__iX2sxG__title {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.Modal-module__iX2sxG__close {
+  cursor: pointer;
+  color: var(--foreground);
+  opacity: .5;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  transition: opacity .2s;
+}
+
+.Modal-module__iX2sxG__close:hover {
+  opacity: 1;
+}
+
+.Modal-module__iX2sxG__content {
+  padding: 1.5rem;
+}
+
+.Modal-module__iX2sxG__footer {
+  border-top: 1px solid var(--color-secondary);
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  display: flex;
+}
+
+@keyframes Modal-module__iX2sxG__fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Modal-module__iX2sxG__slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=components_Modal_module_css_bad6b30c._.single.css.map*/

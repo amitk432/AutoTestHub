@@ -1,0 +1,42 @@
+/* [project]/components/Navbar.module.css [app-client] (css) */
+.Navbar-module__nuAbfa__navbar {
+  border-bottom: 1px solid var(--color-secondary);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  background: #fffc;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  display: flex;
+  position: sticky;
+  top: 0;
+}
+
+.Navbar-module__nuAbfa__logo {
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.Navbar-module__nuAbfa__logo a {
+  text-decoration: none;
+}
+
+.Navbar-module__nuAbfa__links {
+  align-items: center;
+  gap: 1.5rem;
+  display: flex;
+}
+
+.Navbar-module__nuAbfa__link {
+  color: var(--foreground);
+  font-weight: 500;
+  transition: color .2s;
+}
+
+.Navbar-module__nuAbfa__link:hover {
+  color: var(--color-primary);
+}
+
+/*# sourceMappingURL=components_Navbar_module_css_bad6b30c._.single.css.map*/

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/globals.css"],"sourcesContent":[":root {\n  /* Brand Colors */\n  --color-primary: #6C63FF;\n  --color-primary-hover: #5a52d5;\n  --color-secondary: #eaeaea;\n  --color-secondary-hover: #dcdcdc;\n  --color-danger: #ff4d4f;\n  \n  /* Backgrounds */\n  --background: #ffffff;\n  --foreground: #171717;\n  \n  /* UI Elements */\n  --border-radius: 8px;\n  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;\n}\n\n@media (prefers-color-scheme: dark) {\n  :root {\n    --background: #0a0a0a;\n    --foreground: #ededed;\n    --color-secondary: #333333;\n    --color-secondary-hover: #444444;\n  }\n}\n\nhtml,\nbody {\n  max-width: 100vw;\n  overflow-x: hidden;\n  font-family: var(--font-sans);\n  background-color: var(--background);\n  color: var(--foreground);\n  margin: 0;\n  padding: 0;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n}\n\na {\n  color: inherit;\n  text-decoration: none;\n}\n\n* {\n  box-sizing: border-box;\n}\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;;AAiBA;EACE;;;;;;;;AAQF;;;;;;;;;;;;AAaA;;;;;AAKA"}}]
+}
