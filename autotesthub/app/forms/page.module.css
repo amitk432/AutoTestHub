@@ -41,6 +41,23 @@
     clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px);
 }
 
+.input[type="date"] {
+    color-scheme: dark;
+    position: relative;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1) brightness(1.5);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+    filter: invert(1) brightness(2) drop-shadow(0 0 5px var(--neon-cyan));
+}
+
 .input:focus {
     border-color: var(--neon-cyan);
     outline: none;
